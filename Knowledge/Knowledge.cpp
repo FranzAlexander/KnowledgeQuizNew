@@ -69,6 +69,7 @@ void someThingRandom() //A method that reads from a text file using binary.
 	int input;
 	bool stop = false;
 
+	cout << "Random is just for fun it will start any where on any like depending the number you put in." << endl;
 	cout << "Please enter a random number" << endl;
 
 
@@ -94,8 +95,8 @@ void someThingRandom() //A method that reads from a text file using binary.
 		}
 		if (exitOption != "Stop" || exitOption != "stop")//Making sure the program doesnt flip out if user puts something else in.
 		{
+			cout << "Please enter a random number" << endl;
 			cout << "If you would like to exit enter Stop or stop" << endl;
-			return;
 		}
 	}
 	return;
@@ -332,7 +333,7 @@ void searchOrSelect(T &sortedArr) //This is the method where the user chooses wh
 			someThingRandom();
 		}
 		cout << endl << "You are back at option select" << endl;
-		cout << "Would you like to quit type Yes or No" << endl;
+		cout << "Would you like to quit type Yes(Exit Application) or No(Back To Choose which option)" << endl;
 		cin >> exitApp;
 		if (exitApp == "Yes" || exitApp == "yes")
 		{

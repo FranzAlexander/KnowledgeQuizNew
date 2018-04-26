@@ -35,7 +35,7 @@ void readingFile(T &unsortedArr)
 					index++; // Index is increased by 1.
 				}
 			}
-			if(line[0] == 'A') //Seeing if the first charater of the line is A.
+			if (line[0] == 'A') //Seeing if the first charater of the line is A.
 			{
 				if (count < 10)//Will only continue if index is less or equal to 20. 
 				{
@@ -49,7 +49,7 @@ void readingFile(T &unsortedArr)
 			{
 				cout << "There was an error reading the line in the txt file please make sure that ANSWER Starts A and QUESTIONS Starts with Q" << endl;
 			}
-			
+
 		}
 		answerFile.close(); //Closes the file.
 	}
@@ -172,11 +172,11 @@ void writeNSortSelectedToFile(T &tempOrderArr, AT &tempAnsArr)
 	{
 		if (tempOrderArr[i] != 0)
 		{
-			selectedAnfile << "What you entered" << endl;
-			selectedAnfile << tempOrderArr[i] << endl;
-			selectedAnfile << "Answer: " << endl;
-			selectedAnfile << tempAnsArr[count] << endl;
-			selectedAnfile << endl;
+			selectedAnfile << "What you entered" << endl
+				<< tempOrderArr[i] << endl
+				<< "Answer: " << endl
+				<< tempAnsArr[count] << endl
+				<< endl;
 			count++;
 		}
 	}
@@ -207,7 +207,7 @@ void chooseAnswer(T &sortedArr) //Method that checks user input to see what shou
 		cin >> userInput;
 		if (userInput < sortedArr.size() && userInput != 0) //Will only continue if what the user inputs is less than the array size and isnt 0.
 		{
-			getSwitchCase(userInput,sortedArr);
+			getSwitchCase(userInput, sortedArr);
 			tempOrderArr[index] = userInput; //Putting what ever is in the postion that the user has entered into an temp array.
 			tempAnsArr[index] = sortedArr[userInput - 1].getAnswer();
 			index++;
@@ -250,44 +250,44 @@ void searchArray(T &sortedArr) //Searching the array using binary method.
 
 
 
-		cin >> lookFor;
+	cin >> lookFor;
 
-		while (lower <= higher && notFound ) //While lowe is less than or equal to higher && notFound is still equal to false.
-		{	
-		
+	while (lower <= higher && notFound) //While lowe is less than or equal to higher && notFound is still equal to false.
+	{
 
-			int middle = (higher + lower) / 2; //Middle is equal to higher(ArraySize(10)) plus lower 0, divide by 2.
 
-			if (lookFor < sortedArr[middle].getOrder()) //If lookFor(User input) is less than sorted array at the poition that the number middle is.
+		int middle = (higher + lower) / 2; //Middle is equal to higher(ArraySize(10)) plus lower 0, divide by 2.
+
+		if (lookFor < sortedArr[middle].getOrder()) //If lookFor(User input) is less than sorted array at the poition that the number middle is.
+		{
+			higher = middle - 1; //Move to the left;
+		}
+		else if (lookFor > sortedArr[middle].getOrder()) //The oppasite of above so if lookFor is greater than sortedArr middle
+		{
+			lower = middle + 1; //Move to the right;
+		}
+		else
+		{
+			cout << sortedArr[middle].getQuestion() << endl;
+			cout << sortedArr[middle].getAnswer() << endl;
+			cout << "Enter 100 to go back to main or Enter any other number" << endl;
+			cin >> exit;
+
+			if (exit == 100)
 			{
-				higher = middle - 1; //Move to the left;
-			}
-			else if (lookFor > sortedArr[middle].getOrder()) //The oppasite of above so if lookFor is greater than sortedArr middle
-			{
-				lower = middle + 1; //Move to the right;
+				notFound = false;
 			}
 			else
 			{
-				cout << sortedArr[middle].getQuestion() << endl;
-				cout << sortedArr[middle].getAnswer() << endl;
-				cout << "Enter 100 to go back to main or Enter any other number" << endl;
-				cin >> exit;
-
-				if (exit == 100)
-				{
-					notFound = false;
-				}
-				else
-				{
-					cout << "Please enter a number" << endl;
-					cin >> lookFor;
-					lower = 0;
-					higher = sortedArr.size() - 1;
-				}
+				cout << "Please enter a number" << endl;
+				cin >> lookFor;
+				lower = 0;
+				higher = sortedArr.size() - 1;
 			}
-			
-
 		}
+
+
+	}
 }
 
 template <class T>

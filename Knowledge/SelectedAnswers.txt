@@ -1,5 +1,30 @@
 What you entered
+1
+Answer: 
+A5 Waterfall is a methodolgy that is sequential in its development approach tackling one step at a time. The process is considered to be a process flowing steadly downwards hence the name waterfall. The steps are usually (1) Requirement Analysis, (2) Software design, (3) Implementation, (4) Testing, (5) Intergration, (6) Deployment, (7)Maintenance.
+
+What you entered
 2
 Answer: 
+A1 Dynamic Variable: A dynamic variable is a variable that is not given a value until run-time. The information that the dynamic variable will store will be set by the user.
+
+What you entered
+3
+Answer: 
 A2 Medium-size application development is the development of an application that doesnt meet certian specs to be a large size application and has to many to be low sized.
+
+What you entered
+4
+Answer: 
+A3 A standard array is a collection of data. An array holds data that is of the same type. Arrays use memory locations for each element of the array. A file is a sequance of bytes that will hold information, file handling retrives the information and then allows the user to do all sorts of differnet things with that infomation.
+
+What you entered
+5
+Answer: 
+A4 A structure is a group of data that can have differenet types of data in it. While the data might have different types the data will be seen as a single entity.
+
+What you entered
+8
+Answer: 
+A8 The SDLC is made up of different phases. The phases are arranged in order of how important they are and when they are going to start. Phases do the have the ability to overlap each other. SDLC is made up of 6 phases most of the time which are Planning, Defining, Designing, Building, Testing, Deployment.
 
